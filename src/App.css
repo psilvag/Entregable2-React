@@ -148,11 +148,14 @@ color: rgb(255, 255, 255);
 .loading-page{
   width: 100%;
   height: 100vh;
-  background-color: #174257;
+  background-color: #03141d;
   color: white;
-  text-align: center;
   font-size: 30px;
   margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
  
 }
 

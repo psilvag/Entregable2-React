@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react'
 import './App.css'
 import axios from 'axios'
+
 import { Loading } from './components/Loading'
 import { WeatherCard } from './components/WeatherCard'
 
@@ -8,22 +9,25 @@ function App() {
   const [coords, setCoords] = useState()
   const [weather, setWeather] = useState()
   
+  // El primer useEffect obtiene las coordenadas del usuario mediante la API de geolocalizacion de HTML5
   useEffect (()=>{
     
     const succes=pos=>{
+
       const objectPosition={
         lat:pos.coords.latitude,
         lon:pos.coords.longitude
-        
+         
     }
-    setCoords(objectPosition)
 
+    setCoords(objectPosition)
+ 
   }
      
     navigator.geolocation.getCurrentPosition(succes)  // recibe tres callbacks pero no es obligatorio
   },[])
 
-
+  // Consumimos la API 
   useEffect (()=>{
     
     if(coords)
@@ -46,17 +50,9 @@ function App() {
     <div  className="App">
       
        {
-         weather? 
-         <WeatherCard
-         weather={weather}
-         
-         />:<Loading/> 
+         weather? <WeatherCard weather={weather}/>:<Loading/> 
        }
-       
-       
-        
-    
-    </div>
+   </div>
   )
 }
 
