@@ -1,14 +1,14 @@
-
-body{
+body {
   margin: 0;
-  background-image:url('https://assets.puzzlefactory.pl/puzzle/382/699/original.jpg');
+  background-image: url('https://assets.puzzlefactory.pl/puzzle/382/699/original.jpg');
   background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 
-  
+
 }
-h2{
+
+h2 {
   text-align: left;
   margin-left: 20px;
   margin-top: 40px;
@@ -16,8 +16,8 @@ h2{
   font-size: 35px;
   color: rgb(255, 255, 255)
 }
-  
-.weather-card{
+
+.weather-card {
   background-color: #1e4ca0;
   width: 800px;
   height: 480px;
@@ -27,39 +27,45 @@ h2{
   flex-direction: column;
   opacity: 78%;
 }
-.weather-location{
+
+.weather-location {
   display: flex;
   margin: 3px 20px;
-  
+
 }
 
-.weather-location p{
+.weather-location p {
   font-family: Lato sans-serif;
   font-size: 20px;
-  color:white;
+  color: white;
   font-weight: bolder;
 }
-.weather-info{
+
+.weather-info {
   display: flex;
-  gap:25px;
+  gap: 25px;
 }
-.weather-icon{
+
+.weather-icon {
   width: 200px;
-  height: 200px; 
+  height: 200px;
   margin-left: 20px;
 
 }
-.weather-icon img{
+
+.weather-icon img {
   width: 200px;
   height: 200px;
 }
-.weather-info-temp{
+
+.weather-info-temp {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  
+
 }
-.weather-temperature{
+
+.weather-temperature {
   width: 300px;
   height: 100px;
   color: white;
@@ -68,23 +74,26 @@ h2{
   display: flex;
   gap: 10px;
   justify-content: flex-start;
-  
+
 }
-.weather-temperature span{
+
+.weather-temperature span {
   font-size: 45px;
   position: relative;
-  top:12px;
-  
+  top: 12px;
+
 }
-.weather-sensation{
+
+.weather-sensation {
   display: flex;
   font-family: lato sans-serif;
   font-size: 28px;
   color: white;
- 
+
 
 }
-.weather-principal-info{
+
+.weather-principal-info {
   display: flex;
   gap: 10px;
   justify-content: space-around;
@@ -92,46 +101,52 @@ h2{
   font-size: 22px;
   margin-top: 2px;
 }
-.img_info{
+
+.img_info {
   width: 40px;
-  height: 40px; 
+  height: 40px;
   align-self: center;
 }
-.weather-principal-info span{
-text-align: center;
-color: rgb(255, 255, 255);
+
+.weather-principal-info span {
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
-.weather-speed{
+
+.weather-speed {
   display: flex;
   flex-direction: column;
   color: rgb(255, 255, 255);
-  
+
 }
-.weather-clouds{
-  display: flex;
-  flex-direction: column;
-  color: rgb(255, 255, 255);
-}
-.weather-pressure{
+
+.weather-clouds {
   display: flex;
   flex-direction: column;
   color: rgb(255, 255, 255);
 }
 
-.weather-vis{
+.weather-pressure {
   display: flex;
   flex-direction: column;
   color: rgb(255, 255, 255);
 }
-.button-degree{
- width: 200px;
- height: 200px;
- display: flex;
- justify-content: center;
- align-items: center;
+
+.weather-vis {
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
 }
 
-.weather-button{
+.button-degree {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-button {
   width: 140px;
   height: 40px;
   background-color: #071d46;
@@ -142,27 +157,65 @@ color: rgb(255, 255, 255);
   border-radius: 10px;
   border-style: none;
   cursor: pointer;
-  
-  
+
+
 }
-.loading-page{
+
+.loading-page {
   width: 100%;
   height: 100vh;
   background-color: #03141d;
   color: white;
-  font-size: 30px;
-  margin:0 auto;
+  font-size: 45px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 80%;
 
- 
 }
 
-.weather-description{
+.weather-description {
   display: flex;
   font-family: lato sans-serif;
   font-size: 20px;
   color: white;
- 
+
+}
+
+/*=============RESPONSIVE=================*/
+@media(max-width:992px) {
+  .weather-card {
+
+    width: 600px;
+    height: 480px;
+    position: relative;
+
+  }
+
+  .weather-button {
+    position: absolute;
+    top: 120px;
+    right: 100px;
+  }
+}
+
+@media(max-width:600px) {
+  .weather-card {
+
+    width: 450px;
+    height: 480px;
+    position: relative;
+
+  }
+
+  .weather-button {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+  }
+
+  .weather-temperature {
+    font-size: 62px;
+  }
 }
