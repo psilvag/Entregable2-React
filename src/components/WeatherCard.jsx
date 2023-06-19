@@ -47,7 +47,7 @@ export const WeatherCard = ({ weather }) => {
           </div>
         </div>
         <div className='button-degree'>
-          <button onClick={degree} className='weather-button'>{isDegree ? 'Change to ºF' : 'Change to ºC'}</button>
+          <button onClick={degree} className='weather-button'>{isDegree ? 'To ºF' : 'To ºC'}</button>
         </div>
       </div>
 
